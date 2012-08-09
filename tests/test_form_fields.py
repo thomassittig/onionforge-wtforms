@@ -5,21 +5,10 @@
 import unittest, os, mox
 import onionforge_wtforms.fields as fields
 
-from jhi_tools import enum
-
-class FooBar(enum.enumerated):
-    FOO = enum.enum()
-    BAR = enum.enum()
-
-class FooForm(fields.wtforms.Form):
-    foo = fields.EnumSelectField(FooBar)
-
 class EnumSelectFieldTests(unittest.TestCase):
-
 
     def setUp(self):
         pass
-
 
     def tearDown(self):
         pass
@@ -49,3 +38,11 @@ class EnumSelectFieldTests(unittest.TestCase):
 
 
 
+from jhi_tools import enum
+
+class FooBar(enum.enumerated):
+    FOO = enum.enum()
+    BAR = enum.enum()
+
+class FooForm(fields.wtforms.Form):
+    foo = fields.EnumSelectField(FooBar)

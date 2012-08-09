@@ -7,11 +7,11 @@ README = open(os.path.join(here, 'README.txt')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
 requires = ["wtforms",
-            "jhi_tools"
+            #"jhi_tools"
     ]
 
-setup(name='onionforge_wtforms',
-      version='0.0',
+setup(name='onfo_jhitools',
+      version='0.1',
       description='extensions for wtforms',
       long_description=README + '\n\n' +  CHANGES,
       classifiers=[
@@ -24,10 +24,11 @@ setup(name='onionforge_wtforms',
       author_email='',
       url='',
       keywords='web tools',
-      packages=find_packages(),
+      package_dir={'':'src'},
+      packages=find_packages("src"),
       include_package_data=True,
       zip_safe=False,
-      test_suite='onionforge_wtforms',
+      test_suite='wtforms',
       install_requires = requires,
       entry_points = """\
       [paste.app_factory]
