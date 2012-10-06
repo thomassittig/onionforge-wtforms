@@ -10,7 +10,7 @@ requires = ["wtforms",
             #"jhi_tools"
     ]
 
-setup(name='onfo_jhitools',
+setup(name='onfo_wtforms',
       version='0.1',
       description='extensions for wtforms',
       long_description=README + '\n\n' +  CHANGES,
