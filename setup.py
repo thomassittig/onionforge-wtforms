@@ -10,7 +10,7 @@ requires = ["wtforms",
             #"jhi_tools"
     ]
 
-setup(name='onfo_wtforms',
+setup(name='onfo.wtforms',
       version='0.1',
       description='extensions for wtforms',
       long_description=README + '\n\n' +  CHANGES,
@@ -28,10 +28,12 @@ setup(name='onfo_wtforms',
       packages=find_packages("src"),
       include_package_data=True,
       zip_safe=False,
-      test_suite='wtforms',
+      test_suite='tests',
       install_requires = requires,
       entry_points = """\
       [paste.app_factory]
       """,
+      namespace_packages= ['onfo'],
       )
+      
 
